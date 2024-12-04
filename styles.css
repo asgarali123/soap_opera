@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Prevent overlap with fixed navbar */
+    background-color: #fff5f7; /* Light feminine pink */
+    color: #4a4a4a; /* Neutral professional grey */
+}
+
+.container {
+    text-align: center; /* Center all text inside the container */
+    max-width: 600px;
+    background: white; /* Optional: Add a background color to the content area */
+    padding: 20px;
+    border-radius: 8px; /* Rounded edges for a polished look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 20px; /* Extra spacing below navbar */
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    color: #d81b60; /* A deep rose pink */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #ad1457; /* Complementary darker pink */
+    margin-top: 30px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 1em;
+    border: 2px solid #d81b60;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #d81b60;
+    color: white;
+    font-size: 1em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ad1457; /* Darker hover effect */
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.ingredient {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 10px;
+}
+
+.ingredient.checked label {
+    text-decoration: line-through;
+    color: #757575; /* Muted grey */
+}
+
+.completion-message {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ffe3ed; /* Subtle pink background */
+    color: #d81b60;
+    border: 1px solid #ffc1d9; /* Softer pink border */
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+/* Navbar Styling */
+.navbar-custom {
+    background-color: #d81b60; /* Feminine pink background for navbar */
+    color: white;
+    width: 100%; /* Ensure the navbar spans the full width */
+    margin: 0; /* Remove any margin */
+    padding: 10px 0; /* Add some padding for better spacing */
+}
+
+.navbar-custom .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+    font-size: 1em;
+}
+
+.navbar-custom .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar-custom .btn-custom {
+    background-color: white;
+    color: #d81b60;
+    border: 2px solid white;
+}
+
+.navbar-custom .btn-custom:hover {
+    background-color: #ad1457;
+    color: white;
+}
