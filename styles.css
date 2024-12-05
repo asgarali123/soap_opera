@@ -9,25 +9,25 @@ body {
 }
 
 .container {
-    text-align: center; /* Center all text inside the container */
+    text-align: center;
     max-width: 600px;
-    background: white; /* Optional: Add a background color to the content area */
+    background: white;
     padding: 20px;
-    border-radius: 8px; /* Rounded edges for a polished look */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-top: 20px; /* Extra spacing below navbar */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 h1 {
     font-family: 'Georgia', serif;
     font-size: 2.5em;
-    color: #d81b60; /* A deep rose pink */
+    color: #d81b60;
     margin-bottom: 20px;
 }
 
 h2 {
     font-size: 1.5em;
-    color: #ad1457; /* Complementary darker pink */
+    color: #ad1457;
     margin-top: 30px;
 }
 
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #ad1457; /* Darker hover effect */
+    background-color: #ad1457;
 }
 
 ul {
@@ -67,21 +67,21 @@ ul {
 .ingredient {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
     margin-bottom: 10px;
 }
 
 .ingredient.checked label {
     text-decoration: line-through;
-    color: #757575; /* Muted grey */
+    color: #757575;
 }
 
 .completion-message {
     margin-top: 20px;
     padding: 10px;
-    background: #ffe3ed; /* Subtle pink background */
+    background: #ffe3ed;
     color: #d81b60;
-    border: 1px solid #ffc1d9; /* Softer pink border */
+    border: 1px solid #ffc1d9;
     text-align: center;
     font-weight: bold;
     display: none;
@@ -89,11 +89,11 @@ ul {
 
 /* Navbar Styling */
 .navbar-custom {
-    background-color: #d81b60; /* Feminine pink background for navbar */
+    background-color: #d81b60;
     color: white;
-    width: 100%; /* Ensure the navbar spans the full width */
-    margin: 0; /* Remove any margin */
-    padding: 10px 0; /* Add some padding for better spacing */
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
 }
 
 .navbar-custom .navbar-brand {
@@ -103,7 +103,6 @@ ul {
 
 .navbar-custom .navbar-nav .nav-link {
     color: white;
-    font-size: 1em;
 }
 
 .navbar-custom .nav-link.active {
@@ -114,7 +113,6 @@ ul {
 .navbar-custom .btn-custom {
     background-color: white;
     color: #d81b60;
-    border: 2px solid white;
 }
 
 .navbar-custom .btn-custom:hover {

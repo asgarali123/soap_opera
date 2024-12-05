@@ -1,3 +1,22 @@
+// Firebase Configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyDQSsBCbJPnbIDGV9RPL5l9GlyEAWkmDqs",
+    authDomain: "soap-opera-c8c84.firebaseapp.com",
+    projectId: "soap-opera-c8c84",
+    storageBucket: "soap-opera-c8c84.appspot.com",
+    messagingSenderId: "984513742394",
+    appId: "1:984513742394:android:ce051a91c3afa047865703"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Optional: Initialize Firebase Analytics
+if (typeof firebase.analytics === "function") {
+    const analytics = firebase.analytics();
+    console.log("Firebase Analytics Initialized");
+}
+
 // Base ingredients for 1 loaf (1000g total weight)
 const baseIngredients = [
     { name: "Olive Oil", amount: 350, unit: "g" },
@@ -34,11 +53,7 @@ function updateChecklist() {
 
     ingredients.forEach(ingredient => {
         const checkbox = ingredient.querySelector('input[type="checkbox"]');
-        const label = ingredient.querySelector('label');
-        if (checkbox.checked) {
-            ingredient.classList.add('checked');
-        } else {
-            ingredient.classList.remove('checked');
+        if (!checkbox.checked) {
             allChecked = false;
         }
     });

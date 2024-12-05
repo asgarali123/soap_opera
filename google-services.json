@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "984513742394",
+    "project_id": "soap-opera-c8c84",
+    "storage_bucket": "soap-opera-c8c84.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984513742394:android:ce051a91c3afa047865703",
+        "android_client_info": {
+          "package_name": "com.mycompany.shanicesoapmaker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQSsBCbJPnbIDGV9RPL5l9GlyEAWkmDqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
