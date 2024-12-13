@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Body Wash Recipe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Soap Opera</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="series.html">Series</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="text-center text-custom">Liquid Body Wash Recipe</h1>
+
+        <!-- Recipe Table -->
+        <div class="table-container">
+            <table class="table table-bordered mt-4">
+                <thead class="table-header">
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Phase</th>
+                        <th>Function</th>
+                        <th>Percentage</th>
+                        <th>Weight (g)</th>
+                        <th>Volume (mL)</th>
+                        <th>Temperature/Timing</th>
+                        <th>Check</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sodium Coco Isothionate (SCI)</td>
+                        <td>Phase A</td>
+                        <td>Primary surfactant for cleansing and lather</td>
+                        <td>6%</td>
+                        <td>90</td>
+                        <td>-</td>
+                        <td>Heat to ~70&deg;C (158&deg;F), mix until dissolved (30-45 min)</td>
+                        <td><input type="checkbox" onchange="updateChecklist(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>Cocamidopropyl Betaine</td>
+                        <td>Phase A</td>
+                        <td>Secondary surfactant, enhances foam</td>
+                        <td>30%</td>
+                        <td>450</td>
+                        <td>~450</td>
+                        <td>Heat together with SCI</td>
+                        <td><input type="checkbox" onchange="updateChecklist(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>Distilled Water</td>
+                        <td>Phase B</td>
+                        <td>Solvent, base for hydration</td>
+                        <td>52.5%</td>
+                        <td>787.5</td>
+                        <td>787.5</td>
+                        <td>Room temperature or pre-heated to ~50&deg;C (122&deg;F)</td>
+                        <td><input type="checkbox" onchange="updateChecklist(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>Glycerin</td>
+                        <td>Phase B</td>
+                        <td>Humectant, retains moisture</td>
+                        <td>10%</td>
+                        <td>150</td>
+                        <td>150</td>
+                        <td>Mix into water before combining phases</td>
+                        <td><input type="checkbox" onchange="updateChecklist(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>Liquid Germall Plus</td>
+                        <td>Phase B</td>
+                        <td>Preservative to prevent spoilage</td>
+                        <td>0.5%</td>
+                        <td>7.5</td>
+                        <td>~7.5</td>
+                        <td>Add at room temperature after combining</td>
+                        <td><input type="checkbox" onchange="updateChecklist(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>Fragrance Oil (optional)</td>
+                        <td>Phase B</td>
+                        <td>Adds scent</td>
+                        <td>1%</td>
+                        <td>15</td>
+                        <td>~15</td>
+                        <td>Add after cooling to below 40&deg;C (104&deg;F)</td>
+                        <td><input type="checkbox" onchange="updateChecklist(this)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Buttons Container -->
+        <div class="buttons-container">
+            <button class="button" type="button" data-bs-toggle="collapse" data-bs-target="#instructions" aria-expanded="false" aria-controls="instructions">
+                Instructions
+            </button>
+            <button class="button" type="button" data-bs-toggle="collapse" data-bs-target="#tips" aria-expanded="false" aria-controls="tips">
+                Tips
+            </button>
+        </div>
+
+        <!-- Collapsible Instructions -->
+        <div class="collapse" id="instructions">
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-body">
+                        <p>1. Prepare Phase A by combining SCI and Cocamidopropyl Betaine and heating until dissolved.</p>
+                        <p>2. Prepare Phase B by mixing distilled water and glycerin.</p>
+                        <p>3. Combine cooled Phase A and Phase B, then add preservative.</p>
+                        <p>4. Test pH and adjust if necessary.</p>
+                        <p>5. Optionally, add fragrance oil and color.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collapsible Tips -->
+        <div class="collapse" id="tips">
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-body">
+                        <p>- Always ensure all tools are sterilized to avoid contamination.</p>
+                        <p>- Allow the mixture to rest overnight for optimal results.</p>
+                        <p>- Use high-quality fragrance oils and colorants to maintain product clarity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function updateChecklist(checkbox) {
+            const label = checkbox.closest('tr').querySelector('td:first-child');
+            if (checkbox.checked) {
+                label.style.textDecoration = 'line-through';
+                label.style.color = 'gray';
+            } else {
+                label.style.textDecoration = 'none';
+                label.style.color = 'black';
+            }
+        }
+    </script>
+</body>
+</html>

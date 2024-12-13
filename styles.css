@@ -1,121 +1,201 @@
-/* General Styling */
+/* ===== GENERAL BODY STYLING ===== */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    padding-top: 70px; /* Prevent overlap with fixed navbar */
-    background-color: #fff5f7; /* Light feminine pink */
-    color: #4a4a4a; /* Neutral professional grey */
+    font-family: "Playfair Display", serif; /* Apply Playfair Display globally */
+    margin: 0; /* Removes default browser margins */
+    padding-top: 70px; /* Adds space for the fixed navbar */
+    background-color: #fff5f7; /* Light pink background for a feminine touch */
+    color: #4a4a4a; /* Neutral gray color for text */
 }
 
-.container {
-    text-align: center;
-    max-width: 600px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+/* ===== CENTERED CONTENT BOX ===== */
+.center-box {
+    max-width: 600px; /* Limits the width for better readability */
+    margin: 100px auto; /* Centers the box horizontally and vertically */
+    background-color: white; /* Clean white background for contrast */
+    padding: 30px; /* Adds space inside the box */
+    border-radius: 10px; /* Softens edges with rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    text-align: center; /* Centers text within the box */
 }
 
-h1 {
-    font-family: 'Georgia', serif;
-    font-size: 2.5em;
-    color: #d81b60;
-    margin-bottom: 20px;
+/* ===== HEADINGS ===== */
+h1, h2 {
+    color: #d81b60; /* Strong pink for emphasis */
+    font-family: "Playfair Display", serif; /* Ensure headings also use Playfair Display */
 }
 
-h2 {
-    font-size: 1.5em;
-    color: #ad1457;
-    margin-top: 30px;
+/* ===== PARAGRAPHS ===== */
+p.lead {
+    font-size: 1.2em; /* Slightly larger text for key details */
+    font-family: "Playfair Display", serif; /* Use Playfair Display for paragraphs */
 }
 
-p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    font-size: 1em;
-    border: 2px solid #d81b60;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
+/* ===== BUTTONS ===== */
 button {
-    background-color: #d81b60;
-    color: white;
-    font-size: 1em;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
+    font-size: 1.1rem; /* Consistent button text size */
+    padding: 8px 16px; /* Uniform padding for buttons */
+    border-radius: 8px; /* Rounded corners */
+    font-family: "Playfair Display", serif; /* Apply font to buttons */
+}
+
+.btn-custom {
+    background-color: #d81b60; /* Main pink color for buttons */
+    color: white; /* White text for contrast */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 1rem; /* Slightly smaller font size for consistency */
+    font-family: "Playfair Display", serif; /* Apply font to custom buttons */
+}
+
+.btn-custom:hover {
+    background-color: #ad1457; /* Slightly darker pink for hover effect */
+    color: white; /* Keeps text color consistent */
+}
+
+/* Instructions and Tips Buttons */
+.button {
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #ad1457;
-}
-
-ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-.ingredient {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.ingredient.checked label {
-    text-decoration: line-through;
-    color: #757575;
-}
-
-.completion-message {
-    margin-top: 20px;
-    padding: 10px;
-    background: #ffe3ed;
-    color: #d81b60;
-    border: 1px solid #ffc1d9;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 20px; /* Matches other button sizes */
+    background: linear-gradient(to right, #d81b60, #ad1457);
+    color: white;
     text-align: center;
-    font-weight: bold;
-    display: none;
+    transition: all 0.3s ease;
+    font-family: "Playfair Display", serif; /* Apply font to collapsible buttons */
+}
+.button:hover {
+    background: #ad1457; /* Slightly darker for hover */
 }
 
-/* Navbar Styling */
+/* ===== INGREDIENT LIST ===== */
+ul#ingredient-list {
+    list-style: none; /* Removes default bullet points */
+    padding: 0; /* Removes padding around the list */
+    margin: 20px auto; /* Centers the list */
+    max-width: 400px; /* Limits width for alignment */
+    text-align: left; /* Aligns text to the left */
+    font-family: "Playfair Display", serif; /* Apply font to ingredient list */
+}
+
+ul#ingredient-list li {
+    display: flex; /* Aligns checkbox and text horizontally */
+    align-items: center; /* Vertically centers items */
+    margin-bottom: 10px; /* Adds space between items */
+}
+
+ul#ingredient-list li.header-item {
+    font-weight: bold; /* Makes headers bold */
+    font-size: 1.2em; /* Slightly larger text for emphasis */
+    color: #d81b60; /* Matches heading color */
+    margin-top: 15px; /* Adds space above the header */
+    font-family: "Playfair Display", serif; /* Apply font */
+}
+
+/* ===== NAVBAR ===== */
 .navbar-custom {
-    background-color: #d81b60;
-    color: white;
-    width: 100%;
-    margin: 0;
-    padding: 10px 0;
+    background-color: #d81b60; /* Main pink color for the navbar */
+    color: white; /* White text for contrast */
+    position: fixed; /* Stays at the top while scrolling */
+    width: 100%; /* Stretches across the full width */
+    top: 0; /* Aligns it to the top of the viewport */
+    z-index: 1030; /* Ensures it stays above other content */
+    font-family: "Playfair Display", serif; /* Apply font to navbar */
 }
 
-.navbar-custom .navbar-brand {
-    color: white;
-    font-weight: bold;
-}
-
-.navbar-custom .navbar-nav .nav-link {
-    color: white;
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white; /* White text for links and brand name */
+    font-family: "Playfair Display", serif; /* Apply font to navbar links */
 }
 
 .navbar-custom .nav-link.active {
+    font-weight: bold; /* Highlights the active link */
+    text-decoration: underline; /* Adds underline for clarity */
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center; /* Ensures vertical alignment */
+    gap: 1.5rem; /* Space between cards */
+    flex-wrap: wrap; /* Wraps cards if there's insufficient space */
+    margin-top: 50px; /* Adds spacing from top content */
+}
+
+.card {
+    --background: linear-gradient(to left, #d81b60, #ad1457);
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: var(--background);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-info {
+    color: ghostwhite; /* Ensures white text specifically for body.html cards */
     font-weight: bold;
-    text-decoration: underline;
+    font-size: 1.2em;
+    font-family: "Playfair Display", serif; /* Apply font */
 }
 
-.navbar-custom .btn-custom {
-    background-color: white;
-    color: #d81b60;
+.card-body {
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: small;
+    align-self: center;
+    font-family: "Playfair Display", serif; /* Apply font */
 }
 
-.navbar-custom .btn-custom:hover {
-    background-color: #ad1457;
-    color: white;
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarges card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    .cards {
+        gap: 1rem; /* Reduces gap on smaller screens */
+    }
+
+    .card {
+        width: 200px; /* Adjusts card size for smaller screens */
+        height: 250px;
+    }
+
+    .btn-custom {
+        font-size: 1rem; /* Adjusts button size for smaller screens */
+        width: 120px;
+    }
+}
+
+/* ===== BUTTONS CONTAINER ===== */
+.buttons-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 20px; /* Adds space between buttons */
+    margin-top: 20px; /* Adds spacing above buttons */
+}
+
+/* ===== TABLE CENTERING ===== */
+.table-container {
+    display: flex;
+    justify-content: center; /* Centers the table horizontally */
+    margin-top: 20px;
+}
+
+.table {
+    width: auto;
+    margin: 0 auto; /* Centers the table within its container */
+    text-align: center; /* Centers text within table cells */
 }

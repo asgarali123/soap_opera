@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soap Opera - Episodes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Soap Opera</a>
+        </div>
+    </nav>
+
+    <div class="center-box">
+        <h1>Explore Your Soap Recipes</h1>
+        <p class="lead">Choose a type of soap to start calculating your recipe:</p>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <button class="btn btn-custom" onclick="showSoapType('basic')">Basic</button>
+            <button class="btn btn-custom" onclick="showSoapType('moisturizing')">Moisturizing</button>
+            <button class="btn btn-custom" onclick="showSoapType('exfoliating')">Exfoliating</button>
+        </div>
+        <div id="soap-content" class="mt-5"></div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
