@@ -128,7 +128,7 @@ ul#ingredient-list li.header-item {
 .card {
     --background: linear-gradient(to left, #d81b60, #ad1457);
     width: 250px;
-    height: 300px;
+    height: 325px;
     padding: 10px;
     border-radius: 1rem;
     background: var(--background);
@@ -162,6 +162,18 @@ ul#ingredient-list li.header-item {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.cards-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers cards horizontally */
+    align-items: center; /* Centers cards vertically (if needed) */
+    gap: 20px; /* Adds space between the cards */
+    flex-wrap: wrap; /* Allows wrapping if there's not enough space */
+    margin: 20px auto; /* Centers the container itself */
+    max-width: 100%; /* Ensures the container doesn't exceed the page width */
+    text-align: center; /* Centers text inside the cards */
+}
+
+
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 768px) {
     .cards {
@@ -187,7 +199,7 @@ ul#ingredient-list li.header-item {
     margin-top: 20px; /* Adds spacing above buttons */
 }
 
-/* ===== TABLE CENTERING ===== */
+/* ===== TABLE ===== */
 .table-container {
     display: flex;
     justify-content: center; /* Centers the table horizontally */
